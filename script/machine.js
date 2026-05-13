@@ -26,10 +26,12 @@ function setBalance(value){
 function showOnly(id){
     const addmoney = document.getElementById("add-money");
     const cashout = document.getElementById("cashout");
+    const history = document.getElementById("history");
     // console.log(`add Money- ${addmoney}, Cashout - ${cashout}`);
     // hide all
     addmoney.classList.add("hidden");
     cashout.classList.add("hidden");
+    history.classList.add("hidden");
 
     // id wala element ta ke show korbe
     const selected = document.getElementById(id);
