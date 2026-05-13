@@ -38,6 +38,24 @@ document.getElementById("cashout-btn").addEventListener("click", function(){
              alert("cashout successfull");
               console.log("new balance", newBalance);
               balanceElement.innerText = newBalance;
+
+            //   transaction in 4 step
+              // 1- history-container ke dhore niye ashbo
+        const history = document.getElementById("history-container");
+
+        // 2- new div create korbo
+        const newHistory = document.createElement("div");
+
+        // 3- new div innerHTML add korbo
+        newHistory.innerText = `
+        <div class="transaction-card p-5 bg-base-100 >
+        Cashout ${cashoutAmount} TAKA Success to ${cashoutNumber},  at ${new Date()}
+        </div>
+        `;
+
+        // 4-history container a newDiv append korbo
+        history.append(newHistory);
+
         }else{
             // 5.2- true:: show an error alert > return
             alert("invalid pin");
@@ -78,6 +96,24 @@ document.getElementById("cashout-btn").addEventListener("click", function(){
 //         if(pin === "1234") {
 //             alert("Cashout Successful");
 //             balanceElement.innerText = newBalance;
+
+//   //   transaction in 4 step
+//               // 1- history-container ke dhore niye ashbo
+//         const history = document.getElementById("history-container");
+
+//         // 2- new div create korbo
+//         const newHistory = document.createElement("div");
+
+//         // 3- new div innerHTML add korbo
+//         newHistory.innerText = `
+//         <div class="transaction-card p-5 bg-base-100 >
+//         Cashout ${cashoutAmount} TAKA Success to ${cashoutNumber},  at ${new Date()}
+//         </div>
+//         `;
+
+//         // 4-history container a newDiv append korbo
+//         history.append(newHistory);
+
 //         }else{
 //             alert("invalid pin");
 //             return;
